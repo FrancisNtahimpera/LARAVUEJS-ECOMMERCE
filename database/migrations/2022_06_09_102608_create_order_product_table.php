@@ -21,8 +21,8 @@ return new class extends Migration
             $table->integer('total_quantity');
             $table->integer('total_price');
 
-            $table->foreign('order_id')->reference('id')->on('orders');
-            $table->foreign('product_id')->reference('id')->on('products');
+            $table->foreign('order_id')->references('id')->on('orders');
+            $table->foreign('product_id')->references('id')->on('products');
          
         });
     }
